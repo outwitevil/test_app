@@ -43,4 +43,5 @@ class User < ActiveRecord::Base
 
   devise authentication_keys: [:login]
   validates_formatting_of :home_page, using: :url
+  validates_formatting_of :my_ip, using: :ip_address_v4
 end
